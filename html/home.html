@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CUCITA</title>
+	<link rel="stylesheet" type="text/css" href="../css/home.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+  <link rel="icon" href="../images/logo.png">
+</head>
+<body>
+  <!----Header------>
+	<section class="header">
+		<nav class="navbar navbar-expand-lg fixed-top navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#header">
+          <img src="../images/CUCITA.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+             <a class="nav-link" href="#" id="output"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="wear.html">Wears</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="wear.html #banner">Specials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="FAQs.html">FAQs</a>
+            </li>
+          </ul>
+
+          <ul class="right-menu ms-auto">
+          	<li>
+              <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#wishoffcanvasRight" aria-controls="offcanvasRight"><i class="font far fa-star"></i></button>
+            </li> 
+            <li>
+              <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="font fas fa-shopping-cart"></i></button>
+            </li> 
+            <li>
+              <button type="button" class="btn btn-outline-dark sign">Sign Up/Log In</button>
+            </li>
+    		    <li>
+  		        <div class="input-group mb-3">
+  		          <input type="text" class="form-control" placeholder="Search">
+  		          <span class="input-group-text">
+                  <i class="font fas fa-search"></i>
+                </span>
+      		    </div> 
+  		      </li>
+          </ul> 
+        </div>
+      </div>
+    </nav>
+
+    <!-----Wishlist------>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="wishoffcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel">CUCITA WISHLIST</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body text-center">
+        <hr/>
+        There's Nothing In Your Wishlist Yet...
+        <hr/>
+      </div>
+    </div>
+
+    <!-------Cart-------->
+
+    <div class="offcanvas offcanvas-end w-50 p-3" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h2 id="offcanvasRightLabel"><strong>CUCITA CART</strong></h2>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="cart-row">
+          <span class="cart-item cart-header cart-column">ITEM</span>
+          <span class="cart-price cart-header cart-column">PRICE</span>
+          <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+          <strong class="cart-total-title">Total</strong>
+          <span class="cart-total-price">$0</span>
+          <p><strong class="cart-total-title">Shipping Charge</strong>
+          <span>$50</span></p> 
+        </div>
+        <hr />
+        <div class="total-amt d-flex justify-content-between font-weight-bold">
+          <p>The total amount of (including VAT)</p>
+          <p>$<span id="total_cart_amt">0</span></p>
+        </div>
+        <div class="pt-4">
+          <h5 class="mb-4">Expected delivery date</h5>
+            <p>October 22nd 2021 - October 29th 2021</p>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        <hr />
+
+    <!---Discount Code--->
+        <div class="discount_code mt-3 shadow">
+          <div class="card">
+            <div class="card-body">
+              <a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Add Discount Code (Optional)
+              </a>
+              <div class="collapse" id="collapseExample">
+                <div class="mt-3">
+                  <input type="text" name="" id="discount_code1" class="form-control font-weight-bold" placeholder="Enter the discount code">
+                  <small id="error_trw" class="text-dark mt-3">Insert Coupon Code</small>
+                </div>
+                <button class="btn btn-primary btn-sm mt-3" id="apply">Apply</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------Banner------->
+    <div class="banner" id="banner">
+      <div class="row g-0">
+        <div class="col-md-6 g-0">
+          <div class="leftside">  
+            <header>
+              <strong><p>Hello Visitor<p class="count"></p>!</p></strong>
+              <a href="#">Sign In/Sign Up</a>
+            </header>
+          <div class="text-box text-center">
+           <p>Welcome to</p> 
+            <h1>CUCITA</h1>
+            <p class="subtitle">"Your one stop shop for simply luxurious men's apparel"</p> 
+            <a href="wear.html">
+            <button class="button btn--animation-from-top">
+              <span class="btn__text-static">Shop Now</span>
+              <div class="btn__text-dynamic">
+                <span class="btn__text-dynamic-inner">Shop Now</span>
+              </div>
+            </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 g-0">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000" style="background:  linear-gradient(rgba(0,0,0,0.3),transparent), url(../images/joshua-lawrence-qbxGUzLe8mw-unsplash.jpg); background-size: cover; background-position: center;">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000" style="background: linear-gradient(rgba(0,0,0,0.3),transparent), url(../images/krismawan-kadek-9VYig9LmUmE-unsplash.jpg); background-size: cover; background-position: center;">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000" style="background: linear-gradient(rgba(0,0,0,0.3),transparent), url(../images/nathan-dumlao-vsTbiuRRKvA-unsplash.jpg); background-size: cover; background-position: 50% 60%;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="featured" id="featured">
+    <div class="container">
+      <div class="fashion-box">
+        <div class="title-style text-center">
+          <h1>Featured Products</h1>
+        </div>
+      </div>
+
+      <div class="feature">
+        <video src="../images/videoplayback_Trim.mp4" muted loop autoplay></video>
+        <div class="row">
+          <div class="col-md-2">
+            <a href="wear.html #watch">
+              <div class="card">
+                <img src="../images/watch2.jpg" class="card-img-top">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Rolex Gold-Rimmed 204</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-2">
+            <a href="wear.html #watch">
+              <div class="card">
+                <img src="../images/jean1.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Ralph Lauren Premium</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-2">
+            <a href="wear.html #shirt">
+              <div class="card">
+                <img src="../images/shirt1.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Hawes & Curtis Shirt</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-2">
+            <a href="wear.html #shirt"></a>
+              <div class="card">
+                <img src="../images/suit3.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Giorgio Armani Tux</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-2">
+            <a href="wear.html #shoe"></a>
+              <div class="card">
+                <img src="../images/belt2.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Alexander McQueen</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-2">
+            <a href="wear.html #wallet">
+              <div class="card">
+                <img src="../images/wallet2.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Emporio Armani</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+
+  <!-----------Collections------------>
+  <section class="collection">
+    <div class="row">
+      <div class="col-md-5">
+        <a href="#"><img src="../images/enmanuel-betances-santos-wJhVaKcX5bg-unsplash.jpg" class="float-end"></a>
+      </div>
+      <div class="col-md-7">
+        <div class="buy">
+          <h2>Tuxedo</h2>
+          <p>Opt for effortless sophistication with our range of designer suits, brought to you from a selection of world-renowned tailoring masters. Make the perfect addition to your working wardrobe or update your formal repertoire with exquisite tuxedos, two- or three-piece suits from TOM FORD, Brunello Cucinelli, Armani Collezioni and more.</p>
+          <a href="wear.html">Check It Out</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Customer Favourites -->
+  <section class="fashion-trends">
+    <div class="container">
+      <div class="fashion-box">
+        <div class="title-style text-center">
+          <h1>Customer's Favourites</h1>
+        </div>
+      </div>
+
+      <div class="img-accordion">
+        <ul>
+          <li id="item1">
+            <div>
+              <a href="#item1">
+                <h2>LSKD.CO T-Shirts</h2>
+              </a>
+            </div>
+          </li>
+
+          <li id="item2">
+            <div>
+              <a href="#item2">
+                <h2>Armani Tie Clip</h2>
+              </a>
+            </div>
+          </li>
+
+          <li id="item3">
+            <div>
+              <a href="#item3">
+                <h2>Givenchy Jacket</h2>
+              </a>
+            </div>
+          </li>
+
+          <li id="item4">
+            <div>
+              <a href="#item4">
+                <h2>Nimble Made Shirts</h2>
+              </a>
+            </div>
+          </li>
+
+          <li id="item5">
+            <div>
+              <a href="#item5">
+                <h2>LEVI's Premium Jeans</h2>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!--------About Us--------->
+  <section class="about-us" id="about">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="us text-center">
+          <h2>Who We Are</h2>
+          <p>At CUCITA, we are committed to operating our business in a way that drives positive change and creates a more sustainable future. Our Corporate Social Responsibility strategy touches every part of the business and is reinforced by our brand proposition, which challenges our employees to rethink what is possible in luxury retail through creativity and innovation.
+
+          Our Corporate Social Responsibility agenda is driven by bold initiatives that are designed to have a meaningful impact on our people, our customers, our local communities and our environment.</p>
+          <a href="wear.html">Shop With Us</a>
+        </div>    
+      </div>
+
+      <div class="col-md-7">
+        <img src="../images/brands.jpg" class="text-center">
+      </div>
+    </div>
+  </section>
+
+
+  <!-------Offer------------->
+  <section class="offer">
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <img src="../images/caseen-kyle-registos-ebri_NIM2qw-unsplash.jpg" alt="">
+      </div>
+      <div class="col-md-6">
+        <div class="subscribe">
+          <h4>CUCITA EXCLUSIVE</h4>
+          <p>The ultimate way to experience CUCITA? Become a Rewards member and you'll earn points on your purchases, get Cash Rewards, unlock member-only benefits and gain exclusive access to Sales and events.</p>
+          <a href="#">Subscribe</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-------Your Name--------->
+  <section>
+    <div class="login-popup">
+      <div class="box">
+        <div class="formi">
+          <div class="close">&times;</div>
+          <div class="okay" style="display: none;">
+           <h2 id="outpute"></h2>
+          </div>
+
+          <div class="test">
+            <h2>What's Your Name?</h2>
+            <p class="tagline">Let's get to know you exclusively!</p>
+            <div class="wrapper" id="wrapper">    
+            <form class="form" id="form">
+              <input type="text" placeholder="Your Name" class="form-control name" name="nameField" id="userInput" required>
+              <button type="submit" class="btn">Submit</button>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!------Footer-------->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="post">
+            <h5>Recent Posts</h5>
+            <a href="https://www.instagram.com/accounts/login/"><img src="../images/dcl-650-LT-bwyhzr04-unsplash.jpg" alt=""></a>
+            <a href="https://www.instagram.com/accounts/login/"><img src="../images/jusdevoyage-nvZ4NubOIZE-unsplash.jpg" alt=""></a>
+            <a href="https://www.instagram.com/accounts/login/"><img src="../images/karsten-winegeart-Tir0i7Nurow-unsplash.jpg" alt=""></a>
+            <a href="https://www.instagram.com/accounts/login/"><img src="../images/angel-g-vFOxv-8mONw-unsplash.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="links">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="FAQs.html">FAQs</a></li>
+              <li><a href="FAQs.html">Help</a></li>
+              <li><a href="home.html #about">About Us</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="FAQs.html">Privacy Policy</a></li>
+              <li><a href="FAQs.html">Terms & Conditions</a></li>
+            </ul>
+          </div>
+          <div class="pay">
+            <h5>Payment Options</h5>
+            <a href="https://www.apple.com/apple-pay/"><i class="fab fa-apple-pay"></i></a>
+            <a href="https://pay.amazon.com/"><i class="fab fa-amazon-pay"></i></a>
+            <a href="https://www.paypal.com/ng/signin"><i class="fab fa-paypal"></i></a>
+            <a href="https://usa.visa.com/about-visa.html"><i class="fab fa-cc-visa"></i></a>
+            <a href="https://www.mastercard.com.ng/en-ng/consumers.html"><i class="fab fa-cc-mastercard"></i></a>            
+            <a href="https://www.americanexpress.com/"><i class="far fa-credit-card"></i></a>
+            <a href="https://chainstack.com/partners/?utm_term=ethereum&utm_campaign=eth00+eth-dev&utm_source=adwords&utm_medium=ppc&hsa_acc=7102112062&hsa_cam=1998691566&hsa_grp=74839584447&hsa_ad=443886475082&hsa_src=g&hsa_tgt=kwd-68625291543&hsa_kw=ethereum&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwn8SLBhAyEiwAHNTJbS7pOShKCmpj0i5OzyK1R_lu4YO4aIAx2i6_sJ5DsJJbGWHU792c7RoCX2gQAvD_BwE"><i class="fab fa-ethereum"></i></a>
+            <a href="https://loglin.blockkchanl.com/?utm_campaign=GRP_deep132&token=8de29550-5558-4c7f-a0ca-9efcb88c4253#/login"><i class="fab fa-bitcoin"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="socials">
+            <h5>Socials</h5>
+            <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/campaign/landing.php?&campaign_id=1652975230&extra_1=s%7Cc%7C318263901759%7Ce%7Cfacebook%27%7C&placement=&creative=318263901759&keyword=facebook%27&partner_id=googlesem&extra_2=campaignid%3D1652975230%26adgroupid%3D71931260548%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-362360550869%26loc_physical_ms%3D9076654%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=CjwKCAjwn8SLBhAyEiwAHNTJbUSAOQs6igwkYkfD2ozvT60HaCbMvxlUPkpEhz0ltDz-2HvGMh4a9BoC8A8QAvD_BwE"><i class="fab fa-facebook-f"></i></a>
+            <a href="twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://accounts.snapchat.com/accounts/login?continue=https%3A%2F%2Faccounts.snapchat.com%2Faccounts%2Fwelcome"><i class="fab fa-snapchat-ghost"></i></a>
+            <a href="https://www.pinterest.ca/login/"><i class="fab fa-pinterest-p"></i></a>
+            <a href="https://www.youtube.com/account"><i class="fab fa-youtube"></i></a>
+          </div>
+          <div class="contact" id="contact">
+            <h5>Contact Info</h5>
+            <ul>
+              <li>
+                <span><i class="fas fa-map-marker-alt"></i></span>
+                <span>2nd Floor, No.6 Adeola Odeku St,<br>Victoria Island 101241,<br>Lagos</span>
+              </li>
+              <li>
+                <span><i class="fas fa-phone-alt"></i></span>
+                <p><a href="tel:123456789">+234 907 2345 123</a><br><a href="tel:123456789">+234 801 2346 456</a></p>
+              </li>
+              <li>
+                <span><i class="fas fa-envelope"></i></span>
+                <p><a href="https://mail.google.com/">cucita@email.com</a></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <p class="copyright text-center">Copyright 2021 CUCITA&copy; Men's Apparel</p>
+    </div>
+  </footer>
+
+  <!------Continous Scroller------ -->
+
+  <marquee behavior="scroll" bgcolor="saddlebrown" loop="-1" width="100%" class="fixed-bottom" style="display: flex; color: white;">
+    <span><strong>SHOPPINGSPREE COUPON CODE 20% OFF: <i>Dammy20</i></strong></span>
+    <span><strong> 
+    Date: <i id="date"></i>
+    </strong></span>
+    <span><strong> 
+    Region: <i id="location"></i>
+    </strong></span>
+  </marquee>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous">
+  </script>
+  <script src="../js/script.js" type="text/javascript"></script>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,209 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box
+}
+body{
+    font-family: 'poppins', sans-serif;
+}
+h1{
+     font-size: 2.5rem;
+    font-weight: 700;
+    color: maroon;
+}
+h2{
+    
+     font-size: 1.8rem;
+    font-weight: 600;
+}
+h3{
+     font-size: 1.4rem;
+    font-weight: 800;
+}
+.Product h4{
+     font-size: 1.1rem;
+    font-weight: 600;
+}
+.Product h5{
+     font-size: 1rem;
+    font-weight: 400;
+    color: black;
+}
+h6{
+     color: brown;
+}
+.my-5 button{
+    font-size: 0.8rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: saddlebrown;
+    color: aliceblue;
+    padding: 13px 30px;
+    cursor: pointer;
+    text-transform: uppercase; 
+    transition: 0.3s ease;
+    
+}
+.my-5 button:hover{
+    background-color: #CD7F32;
+        
+}
+
+.my-5 hr{
+    display: flex;
+    justify-self: center;
+    width: 50px;
+    height: 4px !important;
+    background-color: saddlebrown;
+    margin-left: 46%;
+}
+
+.star {
+    padding: 10px 0;
+}
+.star i{
+    font-size:0.8rem;
+    color: gold;
+}
+
+
+
+
+#home{
+    
+    background-image:  url("images/another%20banner.jpg"); 
+
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position:top 60px center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+ 
+    
+    
+}
+#home span{
+    color: maroon;
+    float: right;   
+    
+}
+
+#new .one img{
+    width: 80%;
+    height: 80%;
+    background-position:
+   center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+}
+
+#new .one .details{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    transition: 0.3s ease;
+    
+}
+
+
+    
+}
+
+
+
+
+
+#new .one .details button{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    background: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    padding: 2.5px;
+    transform: translateY(70px);
+    transition: 0.3s ease;
+} 
+
+#new .one .details button:hover{
+    color: aliceblue;
+    border-bottom:1px solid white; 
+}
+
+#new .one:nth-child(1) .details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    
+}
+
+
+#new .one:nth-child(2) .details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    
+}
+#new .one:nth-child(3) .details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    
+}
+
+
+/*---product--*/
+.Product{
+    cursor: pointer;
+    margin-bottom: 2rem;
+    
+}
+
+.Product img{
+    transition: 0.3s all;
+    
+}
+
+
+.Product:hover img{
+    opacity: 0.7;
+}
+
+ .Product.buy-btn{
+    background:red;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.3s all;     
+        
+}
+
+.Product:hover .buy-btn{
+    transform: translateY(0);
+    opacity: 1;     
+}
+
+
+
+
+
+
+
+
+
+
+

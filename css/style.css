@@ -1,0 +1,626 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+/*  font-size: 62.5%;*/
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.right-menu li{
+  display: inline-block;
+  margin-top: 30px !important;
+}
+
+.right-menu li .font{
+  font-size: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.navbar-brand img{
+  width: 160px;
+}
+
+.navbar-brand {
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+.header{
+  background: #fff;
+  margin-bottom: 80px;
+}
+
+.navbar{
+  padding: 0 35px !important;
+  background-color: #fff;
+  height: 70px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #000 !important;
+}
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    color: brown !important;
+}
+
+.navbar-toggler{
+  border: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.navbar-toggler .fas{
+  font-size: 30px;
+  cursor: pointer;
+  color: #222;
+}
+
+#output{
+  color: brown !important;
+  cursor: context-menu !important;
+}
+
+.banner{
+    background: url(clark-street-mercantile-qnKhZJPKFD8-unsplash.jpg);
+    height: 70vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+li .sign{
+  display: none;
+}
+
+.fashion-box{
+  margin: 0px 0;
+}
+
+.title-style h1{
+  padding: 40px 0;
+  font-size: 40px;
+}
+
+.title-style {
+  margin: 0 auto 80px;
+  height: 120px;
+  width: 80%;
+  max-width: 700px;
+  background: #fff;
+  position: relative;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 50, 0.5);
+}
+
+.title-style::after{
+  content: '';
+  height: 100px;
+  width: 200px;
+  background-color: black;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: -1;
+}
+
+.title-style::before{
+  content: '';
+  height: 100px;
+  width: 200px;
+  background-color:black;
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  z-index: -1;
+}
+
+
+#banner{
+  background-image:  url("ayrus.jpg"); 
+
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    
+}
+
+
+.button {
+  padding: 10px 20px;
+  position: relative;
+  border: 2px solid #222;
+  color: #fff;
+  background-color: black;
+  overflow: hidden;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.button .btn__text-dynamic, .button .btn__text-dynamic-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: all ease 0.5s;
+}
+  
+.button .btn__text-dynamic {
+  background-color: #fff;
+  color: #222;
+  overflow: hidden;
+}
+  
+.btn--animation-from-top:hover .btn__text-dynamic {
+  transform: translateY(100%);
+}
+.btn--animation-from-top:hover .btn__text-dynamic-inner {
+  transform: translateY(-100%);
+}
+
+
+
+#product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: 100vw;
+}
+
+#product .product-container {
+  width: 100%;
+}
+
+#product .product-container .owl-nav .owl-next, #product .product-container .owl-nav .owl-prev {
+  position: absolute;
+  top: 43%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #000;
+  font-size: 4rem;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+  background: #222;
+}
+
+#product .product-container .owl-nav .owl-next {
+  right: -3px;
+}
+
+#product .product-container .owl-nav .owl-prev {
+  left: 0;
+}
+
+#product .product-container .title {
+  color: #222;
+  margin-top: 7rem;
+  background: #f8f0e3;
+  box-shadow: 5px 4px 5px 4px rgba(0, 0, 50, 0.5);
+}
+
+#product .product-container .title:hover{
+   background: #CD7F32;
+}
+
+
+#product .product-container .product-slider .product-card {
+  height: 400px;
+  width: 300px;
+  margin: 2rem auto;
+  -webkit-box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.5);
+  border-radius: .5rem;
+  position: relative;
+
+}
+
+#product .product-container .product-slider .product-card .image {
+  height: 75%;
+  width: 100%;
+}
+
+#product .product-container .product-slider .product-card .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#product .product-container .product-slider .product-card .content {
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  font-size: 50%;
+}
+
+#product .product-container .product-slider .product-card .content h4 {
+  font-size: 18px;
+  color: #000;
+}
+
+#product .product-container .product-slider .product-card .content .stars i {
+  color: gold;
+}
+
+#product .product-container .product-slider .product-card .content .price {
+  font-size: 1rem;                              
+  color: saddlebrown;
+}
+
+.product-container a{
+  text-decoration: none;
+}
+
+.btn-buy{
+  width: 150px;
+  padding: 10px 0;
+  outline: none !important;
+  border: 0;
+  border-radius: 5px;
+  position: absolute;
+  background: white;
+  left: 50%;
+  bottom: 25%;
+  transform: translate(-50%, 0);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 1;
+}
+
+.product-card:hover .btn-buy{
+  transform: translate(-50%, 50%);
+  bottom: 50%;
+  opacity: 1;
+}
+
+.overlay{
+  height: 0;
+  width: 100%;
+  background: #333;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: .4s;
+}
+
+.product-card:hover .overlay{
+  opacity: .5;
+  height: 100%;
+}
+
+/*---- Offer----*/
+
+.offer{
+  margin-top: 300px;
+  background-color: #f8f0e3;
+  background-size: cover;
+  background-position: center;
+}
+
+.offer .row{
+  margin: initial !important;
+}
+
+.subscribe{
+  max-width: 500px;
+  margin-top: 150px;
+  padding: 60px;
+  background: #fafafa;
+  margin-bottom: 20px;
+}
+
+.subscribe a {
+  width: 100px;
+  display: block;
+  color: #fff !important;
+  background: #000;
+  text-decoration: none !important;
+  padding: 5px;
+  text-align: center;
+}
+
+.offer img{
+  height: 500px;
+  width: 400px;
+  margin-top: -100px;
+  margin-bottom: 100px;
+}
+
+/*------Footer-------*/
+
+.footer{
+    margin-top: 0px;
+    background-color: #000;
+    color: white;
+}
+
+.post{
+    margin: 50px auto;
+    margin-right: 50px;
+}
+
+.post img{
+    width: 100px;
+    height: 125px;
+    cursor: pointer;
+}
+
+.pay{
+    margin-top: 10px;
+}
+
+.pay i, .socials i{
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: #999;
+}
+
+.pay i:hover, .socials i:hover{
+    color: #fff;
+}
+
+.socials{
+    margin-top: 50px;
+}
+
+.links{
+    margin: 50px 0 20px 0;
+    margin-right: 50px;
+}
+
+.links ul{
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.links ul li{
+    list-style: none;
+}
+
+.links ul li a{
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #999;
+}
+
+.links ul li a:hover{
+    color: #fff;
+}
+
+.contact{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.contact ul{
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+.contact ul li{
+    list-style: none;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.contact ul li span:nth-child(1){
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.contact ul li span{
+    color: #999;
+}
+
+.contact ul li a{
+    color: #999;
+    text-decoration: none;
+}
+
+.contact ul li a:hover{
+    color: #fff;
+}
+
+.contact ul li span:hover{
+    color: #fff;
+}
+
+.contact ul li p{
+    margin-bottom: 0;
+}
+
+.copyright{
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 0px;
+    padding-bottom: 25px;
+    color: #999;
+
+}
+
+.footer hr{
+  display: initial;
+}
+
+marquee span{
+    margin: 0 50px;
+}
+
+
+
+@media screen and (max-width: 760px){
+    li .sign{
+        display: inherit;
+    }
+    .post, .socials, .pay, .links, .contact{
+        margin-top: auto;
+    }
+    .post{
+        margin-top: 30px;
+    }
+    .offer img{ width: 100%; }
+    .navbar{ height: initial; }
+}
+
+@media (max-width: 768px) {
+  /*html {
+    font-size: 55%;
+  }*/
+  #product .product-container .title {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 27px;
+}
+
+
